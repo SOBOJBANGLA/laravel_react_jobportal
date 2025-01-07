@@ -4,7 +4,6 @@ import {Link, usePage } from '@inertiajs/react';
 
 import React from 'react'
 
-
 export default function JobDetails(props) {
   const{ job,locations,categories,jobtypes,companies} = usePage().props
  
@@ -45,7 +44,7 @@ export default function JobDetails(props) {
                                 <h4>{job.title}</h4>
 
                                 <ul className="list-unstyled mb-0">
-                                    <li className="d-inline-flex align-items-center text-muted me-2"><i data-feather="layout" className="fea icon-sm text-primary me-1"></i> {}</li>
+                                    <li className="d-inline-flex align-items-center text-muted me-2"><i data-feather="layout" className="fea icon-sm text-primary me-1"></i> {CompanyName(job.company_id)}</li>
                                     <li className="d-inline-flex align-items-center text-muted"> {LocationName(job.location_id)}</li>
                                 </ul>
                             </div>
